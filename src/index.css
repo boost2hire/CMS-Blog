@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: Stack Sans Text, sans-serif;
+    /* background-color: #f1f1f1; */
+    background: linear-gradient(to right,#bdc3c7, #2c3e50);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+img {
+    max-width: 100%;
+    margin: auto;
+    height: 250px;  
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: -4px 5px 16px rgb(40, 37, 37);
+    transition: transform 0.4s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+@media (min-width: 768px) {
+    img.blog__image {
+        height: 400px;
+    }
+
+    .block__content p{
+    font-size: 18px;
+
+}
+
+}
+
+.block__content p{
+    line-height: 1.6;
+    margin-left: 20%;
+}
+
+.block__content h2 {
+    font-weight: 700;
+    font-size: 32px;
+    margin: 10px 0 20px;
+    margin-left: 20%;
+
+}
+
+.block__content li {
+    margin-left: 20%;
+}
+
+.block__content blockquote {
+    margin-left: 20%;
+}
+
+/* section button {
+    margin-top: 20px;
+    margin-left: 50%;
+    margin-bottom: 80px;
+} */
