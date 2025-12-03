@@ -17,6 +17,5 @@ app.get("/", (req, res) => {
 app.use("/api/posts", postsRoutes);
 
 app.listen(process.env.PORT, () => {
-    console.log(`server running at https://localhost:${process.env.PORT}`);
-    
+   console.log(`Server running at http://localhost:${process.env.PORT}`);  
 })

@@ -19,7 +19,7 @@ export default function AddPost() {
         const formData = new FormData();
         formData.append("image", file);
         
-        const res = await fetch("http://localhost:5000/api/posts/upload", {
+        const res = await fetch("http://localhost:5001/api/posts/upload", {
             method: "POST",
             body: formData,
         })
@@ -49,7 +49,7 @@ export default function AddPost() {
             }
 
         try {
-            const res = await fetch("http://localhost:5000/api/posts", {
+            const res = await fetch("http://localhost:5001/api/posts", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

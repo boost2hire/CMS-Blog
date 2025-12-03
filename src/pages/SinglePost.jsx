@@ -8,7 +8,7 @@ export default function SinglePost() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/posts/${id}`)
+    fetch(`http://localhost:5001/api/posts/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setSinglePost(data);

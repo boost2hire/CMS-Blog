@@ -5,7 +5,7 @@ export default function Blog() {
   const [posts, setPosts] = useState([]);
 
   const fetchPosts = () => {
-    fetch("http://localhost:5000/api/posts")
+    fetch("http://localhost:5001/api/posts")
     .then((res) => res.json())
     .then((data) => {
       if(Array.isArray(data)) setPosts(data);
@@ -28,7 +28,7 @@ export default function Blog() {
     if(!confirmDelete) return;
 
     try {
-      await fetch(`http://localhost:5000/api/posts/${id}`, {
+      await fetch(`http://localhost:5001/api/posts/${id}`, {
         method: "DELETE",
       });
 

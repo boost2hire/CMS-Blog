@@ -19,7 +19,7 @@ export default function EditPost() {
 
   // Fetch existing post
   useEffect(() => {
-    fetch(`http://localhost:5000/api/posts/${id}`)
+    fetch(`http://localhost:5001/api/posts/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setTitle(data.title);
@@ -36,7 +36,7 @@ export default function EditPost() {
     const formData = new FormData();
     formData.append("image", file);
 
-    const res = await fetch("http://localhost:5000/api/posts/upload", {
+    const res = await fetch("http://localhost:5001/api/posts/upload", {
       method: "POST",
       body: formData,
     });
@@ -67,7 +67,7 @@ export default function EditPost() {
     }
 
     try {
-      const res = await fetch(`http://localhost:5000/api/posts/${id}`, {
+      const res = await fetch(`http://localhost:5001/api/posts/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
